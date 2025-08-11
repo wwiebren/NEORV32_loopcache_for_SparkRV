@@ -4,15 +4,6 @@ This repository is part of a master's thesis. It contains the implementation of 
 
 ## Folder structure
 
-- [`sw`](/sw/): Contains the code fot both benchmark applications
-    - [`fully_connected_nn`](/sw/fully_connected_nn/): The fully connected NN benchmark application
-        - [`main.c`](/sw/fully_connected_nn/main.c): Application code for NEORV32
-        - [`model.py`](/sw/fully_connected_nn/model.py): Python file for creating, training, and quantizing the neural network. Generates the neorv32_dmem_image_*.hex files. 
-        - [`requirements.txt`](/sw/fully_connected_nn/requirements.txt): Required python modules. 
-        - [`hex_initfiles_to_vhdl.py`](/sw/fully_connected_nn/hex_initfiles_to_vhdl.py): Converts the hex init files to a vhdl initialization file. Needed if no SRAM is used and the initialization is done within VHDL. 
-        - [`README.md`](/sw/fully_connected_nn/README.md): Explains how to build the application
-    - [`lenet`](/sw/lenet/): The LeNet-5 benchmark application
-        - [`main.c`](/sw/lenet/main.c): Application code for NEORV32
 - [`hw`](/hw/): Contains the hardware concepts set up with the LeNet-5 application
     - [`baseline`](/hw/baseline/): Baseline hardware
         - [`rtl`](/hw/baseline/rtl/): Hardware sources for the NEORV32 processor and initialization files
@@ -26,3 +17,12 @@ This repository is part of a master's thesis. It contains the implementation of 
     - [`static_loopcache`](/hw/static_loopcache/): Static loop cache hardware
         - [`rtl`](/hw/baseline/rtl/): Hardware sources for the NEORV32 processor, static loop cache, and initialization files
         - [`sim`](/hw/baseline/sim/): Scripts to run the simulation using Cadence toolset
+- [`sw`](/sw/): Contains the code fot both benchmark applications
+    - [`fully_connected_nn`](/sw/fully_connected_nn/): The fully connected NN benchmark application
+        - [`main.c`](/sw/fully_connected_nn/main.c): Application code for NEORV32
+        - [`model.py`](/sw/fully_connected_nn/model.py): Python file for creating, training, and quantizing the neural network. Generates the neorv32_dmem_image_*.hex files. 
+        - [`requirements.txt`](/sw/fully_connected_nn/requirements.txt): Required python modules. 
+        - [`hex_initfiles_to_vhdl.py`](/sw/fully_connected_nn/hex_initfiles_to_vhdl.py): Converts the hex init files to a vhdl initialization file. Needed if no SRAM is used and the initialization is done within VHDL. 
+        - [`README.md`](/sw/fully_connected_nn/README.md): Explains how to build the application
+    - [`lenet`](/sw/lenet/): The LeNet-5 benchmark application
+        - [`main.c`](/sw/lenet/main.c): Application code for NEORV32
